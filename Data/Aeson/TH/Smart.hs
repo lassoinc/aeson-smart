@@ -402,8 +402,8 @@ lookupField d tName rec obj key =
 noMatch :: Name -> MatchQ
 noMatch tName = do
   flip (match wildP) []
-    (normalB $ [| fail $ printf "No constructors for type %s were present." |]
-      `appE` (sigE (litE $ stringL $ nameBase tName) (conT ''String)))
+    (normalB $ [| fail |] `appE` ([| printf "No constructors for type %s were present." |]
+      `appE` (sigE (litE $ stringL $ nameBase tName) (conT ''String))))
 
 parseTypeMismatch :: Name -> Name -> ExpQ -> ExpQ -> ExpQ
 parseTypeMismatch tName conName expected actual =
