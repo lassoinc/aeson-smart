@@ -1,11 +1,13 @@
 name:                aeson-smart
-version:             0.1.0.0
+version:             0.2.0.0
 synopsis:            Smart derivation of Aeson instances
--- description:         
+description:         Aeson-smart generates ToJSON and FromJSON instances that ignore extra fields
+                     and fill in missing fields with default values. 
 homepage:            https://github.com/lassoinc/aeson-smart
 license:             MIT
 author:              Sam Anklesaria
 maintainer:          amsay@amsay.net
+license-file:        LICENSE
 -- copyright:           
 category:            Web
 build-type:          Simple
